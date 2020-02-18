@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      //    垫片 有3种写法 ---3
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-react" // 执行顺序从下往上,从右往左
+  ],
+  "plugins": [
+    // "@babel/plugin-syntax-dynamic-import", // 老版本的webpack需要配置
+    // "transform-runtime" 插件告诉 babel 要引用 runtime 来代替注入。
+    "@babel/plugin-transform-runtime",
+    //    解决 es6装饰器
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    // 解决类里的变量
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ]
+}
