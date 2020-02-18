@@ -1,11 +1,11 @@
 {
-  "name": "webpack-demo",
+  "name": "{{name}}",
   "sideEffects": [
     "*.css",
     "*.scss"
   ],
-  "version": "1.0.0",
-  "description": "",
+  "version": "{{version}}",
+  "description": "{{description}}",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "buildP": "cross-env NODE_ENV=production webpack --profile --json > stats.json --config ./config/webpack.config.dev.js",
     "build:dll": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.dll.js"
   },
-  "author": "Pang Hao",
+  "author": "{{author}}",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.3",
